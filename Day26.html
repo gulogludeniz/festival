@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twickenham Music Festival</title>
+    <link rel="Stylesheet" href="./Music-Festival.css">
+    
+
+    <script src="https://kit.fontawesome.com/7fad1a4b3c.js" crossorigin="anonymous"></script>
+    <script src="Music-Festival.js"></script>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+ 
+</head>
+
+<body>
+    <section class="header">
+
+      <div class="flex">
+         <a href="#home" class="logo"><i class="fa-solid fa-music"></i>Twickenham Music Festival Official Website</a>
+         <a href="#buytickets" class="btn">buy tickets</a>
+         <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+
+    
+    <nav class="navbar">
+        <a href="Home">Home</a>
+        <a href="Line Up">Line Up</a>
+        <a href="Festival">Festival</a>
+        <a href="Tickets">Tickets</a>
+        <a href="Info">Contact Us</a>
+    
+      </nav>          
+
+
+  <section class="home" id="home">
+
+    <div class="swiper home-slider">
+ 
+       <div class="swiper-wrapper">
+ 
+          <div class="box swiper-slide">
+             <img src="/Festivalimages/Festival1.jpg" alt="">
+          </div>
+ 
+          <div class="box swiper-slide">
+             <img src="/Festivalimages/Festival2.jpg" alt="">
+             
+          </div>
+ 
+          <div class="box swiper-slide">
+             <img src="/Festivalimages/Festival3.jpg" alt="">
+        
+          </div>
+
+          <div class="box swiper-slide">
+            <img src="/Festivalimages/Festival4.jpg" alt="">
+       
+         </div>
+
+         <div class="box swiper-slide">
+          <img src="/Festivalimages/Festival5.jpg" alt="">
+     
+       </div>
+
+      </div>
+ 
+       <div class="swiper-button-next"></div>
+       <div class="swiper-button-prev"></div>
+ 
+    </div>
+ 
+ </section>
+
+      <section class="sale" id="sale">
+        <div class="buy_tickets" id="buy_tickets">
+          <br>
+          <h4>Buy Tickets</h4>
+        <p>Date <span>*</span></p>
+          <input type="date" name="date" class="input" required>
+        <form>
+          <h5>How many tickets would you like to purchase?</h5>
+          <label class="label" for="ticket-quantity"></label>
+          <select type="number" id="ticket-quantity" name="ticket-quantity" min="1" max="8">
+            <option value="1">1 Ticket</option>
+            <option value="2">2 Tickets</option>
+            <option value="3">3 Tickets</option>
+            <option value="4">4 Tickets</option>
+            <option value="5">5 Tickets</option>
+            <option value="6">6 Tickets</option>
+         </select>
+          <br>
+          <button type="button" class="btn" onclick="buyTicket()">Proceed</button>
+          <p id="ticket-message" style="color:red" 12px></p>
+        </form>
+      </div>
+
+
+    </section>
+
+
+<section class="contact" id="contact">
+  <div class="row">
+    <form action="" method="post">
+      <h3>Sign up now for all the latest festival news and announcements!</h3>
+      <input type="text" name="name" required maxlength="50" placeholder="enter your name" class="box">
+      <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
+      <input type="number" name="number" placeholder="enter your number" class="box">
+      <input type="submit" value="submit" name="send" class="btn">
+
+    </form>
+  </div>
+</section>
+
+
+<script>
+        // Define ticket price
+        const ticketPrice = 100;
+        
+        function buyTicket() {
+        // Get ticket quantity input
+        const ticketQuantityInput = document.getElementById("ticket-quantity");
+        const ticketQuantity = parseInt(ticketQuantityInput.value);
+        
+        // Calculate total price
+        const totalPrice = ticketQuantity * ticketPrice;
+        
+        // Display success message if quantity is valid and purchase is successful
+        if (ticketQuantity >= 1 && ticketQuantity <= 5) {
+        document.getElementById("ticket-message").innerHTML = `Success! You have purchased ${ticketQuantity} ticket(s) for a total of £${totalPrice}.`;
+        } else {
+        // Display error message if quantity is invalid
+        document.getElementById("ticket-message").innerHTML = "Error: Invalid ticket quantity. You can not get more than 5 tickets.";
+        }
+        }
+        
+
+
+        </script>
+
+        <script>
+
+          var swiper = new Swiper(".home-slider", {
+            loop:true,
+            effect: "coverflow",
+            spaceBetween: 30,
+            grabCursor: true,
+            coverflowEffect: {
+               rotate: 50,
+               stretch: 0,
+               depth: 100,
+               modifier: 1,
+               slideShadows: false,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+         });
+         </script>
+    
+</body>
+</html>

@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+:root{
+    --main-color: rgb(250,250,210);
+    --sub-color: #2B1103;
+    --light-color: #666;
+    --border: .1rem solid rgba(220,198,156, .3);
+    --white: #fff;
+
+  }
+
+  *{
+    margin: 0; 
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+        
+     }
+
+  html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+
+  }
+
+  body{
+    background-color: var(--main-color);
+      
+    
+  }
+
+  section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+ }
+
+
+ *::selection{
+    background-color: var(--sub-color);
+    color: var(--main-color);
+ }
+ 
+ *::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+ }
+ 
+ *::-webkit-scrollbar-track{
+    background-color: transparent;
+ }
+ 
+ *::-webkit-scrollbar-thumb{
+    background-color: var(--sub-color);
+    border-radius: 5rem;
+ }
+
+ .btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: var(--border);
+    font-size: 1.8rem;
+    color: var(--sub-color);
+    text-align: center;
+    text-transform: capitalize;
+    transition: .2s linear;
+    margin-top: 1rem;
+    background-color: var(--main-color);
+ }
+ 
+ .btn:hover{
+    border-radius: 5rem;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+ }
+ 
+ .header{
+    padding-bottom: 0;
+ }
+ 
+ .header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+ }
+ 
+ .header .flex .logo{
+    color: var(--sub-color);
+    font-size: 2.5rem;
+ }
+ 
+ .header .flex .btn{
+    margin-top: 0;
+ }
+ 
+ .header .flex .fa-bars{
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--sub-color);
+    display: none;
+ }
+ 
+ .header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    background-color: var(--sub-color);
+    padding: .5rem;
+    border-radius: .5rem;
+ }
+ 
+ .header .navbar a{
+    font-size: 1.8rem;
+    color: var(--main-color);
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+ }
+ 
+ .header .navbar a:hover{
+    background-color: var(--main-color);
+    color: var(--sub-color);
+ }
+ 
+ .home .box img{
+    border-radius: .5rem;
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+ }
+ 
+
+ .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+ .swiper-button-prev{
+    left: 0%;
+ }
+ 
+ .swiper-button-next{
+    right: 0;
+ }
+ 
+ .swiper-button-next,
+ .swiper-button-prev{
+    padding: 3rem 2rem;
+    background-color: var(--white);
+    top: 40%;
+    opacity: .7;
+ }
+ 
+ .swiper-button-next::after,
+ .swiper-button-prev::after{
+    color: var(--main-color);
+    font-size: 2rem;
+ }
+ 
+ .swiper-button-next:hover,
+ .swiper-button-prev:hover{
+    opacity: 1;
+ }
+
+ .tickets form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+ }
+ 
+ .tickets form .flex .box{
+    flex: 1 1 20rem;
+ }
+ 
+ .tickets form .flex .box p{
+    font-size: 2rem;
+    color: var(--sub-color);
+ }
+ 
+ .tickets form .flex .box .input{
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    background-color: var(--main-color);
+    color: black;
+    border-bottom: var(--border);
+    margin: 1rem 0;
+ }
+
+ .contact .row{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    border: 5px solid sienna;
+    font-weight: bold;
+ }
+
+ .sale .buy_tickets{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    font-weight: bolder;
+    border: 4px solid sienna;
+    color:black;
+
+
+ }
+
+ .sale .buy_tickets form{
+    flex: 1 1 40rem;
+        border: var(--border);
+        border-radius: .5rem;
+        padding: 2rem;
+        text-align: center;
+        font-size: 3rem ;
+
+ }
+
+
+ .sale .buy_tickets h4{
+
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    padding: 1.2rem;
+    color:sienna;
+    font-style:italic;  
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    margin-top: 10px;
+    
+
+ }
+
+ 
+
+ .sale .buy_tickets form h5{
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    padding: 1.2rem;
+    color: var(--main-color);
+    background-color: var(--sub-color);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  
+ }
+ 
+ .contact .row form{
+        flex: 1 1 40rem;
+        border: var(--border);
+        border-radius: .5rem;
+        padding: 2rem;
+        text-align: center;
+        
+ }
+    
+
+.contact .row form h3{
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    padding: 1.2rem;
+    color: var(--main-color);
+    background-color: var(--sub-color);
+    font-size: 2.2rem;
+    text-transform: capitalize;
+
+ }
+ 
+ .contact .row form .box{
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: var(--border);
+    font-size: 1.8rem;
+    color: var(--main-color);
+    background:var(--sub-color);
+    width: 100%;
+
+ }
+ 
+ .contact .row form .box::placeholder{
+    color: rgba(220, 198, 156, .6);
+  
+ }
+ 
+
+
+ 
+
+ 
+ 
+  
