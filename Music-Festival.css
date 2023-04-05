@@ -292,6 +292,19 @@
     color: rgba(220, 198, 156, .6);
   
  }
+
+ .footer .box-container{
+   background: rgb(220, 198, 156, .6);
+ }
+
+ .footer .box-container .box a{
+   
+   color: var(--sub-color);
+   font-size: 1.5rem;
+   align-items: center;
+   padding-inline-start: 18rem;
+   font-weight: bolder;
+ }
  
 
 
